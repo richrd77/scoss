@@ -45,12 +45,26 @@ $scoss-theme: mat.define-light-theme(
 html,
 body {
   height: 100%;
+  margin: 0;
+  font-family: "Poppins";
+  font-size: 1.1rem;
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 body {
-  margin: 0;
-  font-family: "Ubuntu Sans";
-  font-size: 1.1rem;
-  background-color: rgb(241, 244, 247);
+  --background-color: white;
+  --font-color: black;
+  --button-color: black;
+  --button-font-color: white;
+  --box-shadow-color:rgba(0,0,1,0.5)
+  
+  &.dark{
+  --background-color: black;
+  --font-color: white;
+  --button-color: white;
+  --button-font-color: black;
+  --box-shadow-color:rgba(0,0,1,0.5)
+  }
 }
 
 button, a, input {
