@@ -1,0 +1,125 @@
+ 
+section.aboutus{
+    // padding: 0px;
+    // background-color: #f9f9f9;
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 20px;
+  
+    .about-us {
+      h2 {
+        color: red;
+        font-size: 2.10;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 1.1rem;
+        color:  #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .img {
+        margin-top: 20px;
+        box-shadow: inset;
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 20px;
+        }
+      }
+    }
+  
+    .Serving,
+    .Our-Service {
+      margin-bottom: 40px;
+      h3 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items:center ;
+      ul {
+        list-style-type: none;
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: center;  
+        li {
+          padding: 1em;
+          box-shadow: 0 0 5px 2px rgba($color: #000000, $alpha: 0.1);
+          border-radius: 10px;
+            
+          }
+        }
+      }
+    }
+  
+    .Why-Partner {
+      h2 {
+        font-size: 2.5rem;
+        color: red;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items:center ;
+      text-align: left;
+      ul {
+        list-style-type: none;
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;  
+        li {
+
+          padding: 1em;
+          box-shadow: 0 0 5px 2px rgba($color: #000000, $alpha: 0.1);
+          border-radius: 10px;
+          display: flex;
+          img{
+            padding: 0 0.5em;
+          }            
+          }
+        }
+      }
+    
+  
+ 
+    @media (max-width: 768px) {
+      .about-us {
+        h2 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1rem;
+          max-width: 100%;
+        }
+      }
+  
+      .Serving,
+      .Our-Service,
+      .Why-Partner{
+        h3 {
+          font-size: 1.8rem;
+        }
+        ul {
+          li {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  
