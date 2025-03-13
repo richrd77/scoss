@@ -1,0 +1,15 @@
+<section class="services-overview-section">
+    <h2>Our IT Services</h2>
+    <p class="sub-title">Explore our wide range of IT services designed to support your business needs:</p>
+    <div class="services">
+        <div class="service-card" appearance="outlined" *ngFor="let data of serviceList">
+            <p class="service-heading">{{data.title}}</p>
+            <img [src] ="data.iconURL" alt="">  
+            <p>{{data.description}} </p>
+            <p>{{data.features}}</p>
+            <button>{{data.buttonName}}</button>
+        </div>
+    </div>  
+
+
+</section>
