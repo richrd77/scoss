@@ -24,6 +24,7 @@ header {
         > div.company-name {
             > h1.normal-name {
                 font-size: 2rem;
+                color: red;
                 @media (max-width: 1011px) {
                     font-size: 1.5rem;
                 }
@@ -42,6 +43,7 @@ header {
                 }
             }
             > p {
+                 color:darkorange;
                 text-align: right;
                 font-size: 1.5rem;
                 font-style: italic;
