@@ -1,106 +1,91 @@
-$white-bg: white;
-
-header {
-    background-color: $white-bg;
-    padding: 1em 2em;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
-    @media (max-width:391px) {
-        padding: 1em;
-    }
-    > section.top {
+.header {
+    background-color: #1c1b1b;
+    padding: 10px 0;
+    color: white;
+  
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  
+      .logo {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        > div.logo {
-            > img {
-                height: 150px;
-                aspect-ratio: 1/1;
-                @media (max-width: 813px) {
-                    height: 100px;
-                }
-            }
+        gap: 12px;
+  
+        img {
+          width: 120px;
+          height: auto;
         }
-        > div.company-name {
-            > h1.normal-name {
-                font-size: 2rem;
-                @media (max-width: 1011px) {
-                    font-size: 1.5rem;
-                }
-                @media (max-width: 813px) {
-                    font-size: 1.1rem;
-                }
-                @media (max-width: 611px) {
-                    display: none;
-                }
-            }
-            > h1.mobile-name {
-                display: none;
-                font-size: 1.5rem;
-                @media (max-width: 611px) {
-                    display: block;
-                }
-            }
-            > p {
-                text-align: right;
-                font-size: 1.5rem;
-                font-style: italic;
-                @media (max-width: 1011px) {
-                    font-size: 1.1rem;
-                }
-                @media (max-width: 813px) {
-                    font-size: 0.9rem;
-                }
-                @media (max-width: 359px) {
-                    font-size: 0.7rem;
-                }
-                &::before {
-                    content: "\201c";
-                }
-                &::after {
-                    content: "\201d";
-                }
-            }
-        }
-    }
-    > nav {
-        margin: 0.5em;
-        > div.mobile-menu {
+  
+        .company-name {
+          .normal-name {
+            font-size: 18px;
+            font-weight: bold;
+          }
+  
+          .mobile-name {
             display: none;
-            @media (max-width: 655px) {
-                display: block;
-                text-align: right;
-            }
-            > button {
-            }
-            > mat-menu {
-                > a:nth-of-type(1) {
-                }
-            }
+          }
+  
+          p {
+            font-size: 14px;
+          }
         }
-        > ul {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            list-style: none;
-            @media (max-width: 655px) {
-                display: none;
-            }
-            > li {
-                > a {
-                    color: inherit;
-                    padding: 1em 3em;
-                    @media (max-width: 1074px) {
-                        padding: 1em 2em;
-                    }
-                    @media (max-width: 863px) {
-                        padding: 1em;
-                    }
-                    &:hover {
-                        background-color: rgba(0, 0, 0, 0.1);
-                    }
-                }
-            }
+      }
+  
+      .nav-links {
+        display: flex;
+        gap: 30px;
+  
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 16px;
+  
+          &:hover {
+            text-decoration: underline;
+          }
         }
+      }
+  
+      .menu-icon {
+        display: none;
+  
+        svg {
+          width: 30px;
+          height: 30px;
+          fill: #e3e3e3;
+        }
+      }
     }
-}
+  
+    @media (max-width: 1118px) {
+      .nav-container {
+        .nav-links {
+          display: none;
+        }
+  
+        .company-name {
+          .normal-name,
+          p {
+            display: none;
+          }
+  
+          .mobile-name {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+  
+        .menu-icon {
+          display: block;
+        }
+      }
+    }
+  }
+  

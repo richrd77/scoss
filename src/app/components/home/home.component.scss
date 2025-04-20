@@ -1,82 +1,262 @@
-div.wrapper {
-    margin: 1em 2em;
-    @media (max-width: 448px) {
-        margin: 1em 0;
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .header {
+    background: #211f1f;
+    color: #fff;
+    padding: 1rem 0;
+  
+    .logo {
+      display: flex;
+      align-items: center;
+      img {
+        height: 40px;
+        margin-right: 0.5rem;
+      }
+      span {
+        font-weight: bold;
+      }
     }
-    > div.content {
-        > p {
-            margin-bottom: 0.5em;
-            > strong.highlight {
-                color: #ff0000;
-            }
+    
+    
+  
+    .nav {
+      display: flex;
+      gap: 1rem;
+      a {
+        color: #ccc;
+        text-decoration: none;
+  
+        &:hover {
+          color: #fff;
         }
-        > div.bullet {
-            > p {
-                margin: 0.15em 1em;
-                > strong {
-                    &::after {
-                        content: "-";
-                        margin: 0 10px;
-                    }
-                }
-            }
-        }
+      }
     }
-    > div.services {
-        margin: 3em 0;
-        display: grid;
-        grid-template-columns: 300px 300px 300px 300px;
-        gap: 2em;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hero {
+    background: #f5f5f5;
+    text-align: center;
+    padding: 4rem 1rem;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .cta {
+      .primary {
+        background: #2563eb;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        margin-right: 1rem;
+        cursor: pointer;
+      }
+  
+      a {
+        color: #2563eb;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .value-prop {
+    text-align: center;
+    padding: 3rem 1rem;
+  
+    .btn {
+        display: flex;
         justify-content: center;
-        @media (max-width: 1454px) {
-            grid-template-columns: 300px 300px 300px;
-        }
-        @media (max-width: 1108px) {
-            grid-template-columns: 300px 300px;
-        }
-        @media (max-width: 775px) {
-            grid-template-columns: 300px;
-        }
-        .service-card {
-            .mat-mdc-card-title {
-                margin-bottom: 8px;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+
+        button {
+            padding: 1rem 2.2rem;
+            font-size: 1rem;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+
+            &:hover {
+                background-color: #2980b9;
             }
-            p {
-                margin: 1em 0;
-            }
-            img {
-                height: 200px;
-            }
+        }}
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+  
+    ul {
+      margin-bottom: 1rem;
+      li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        text-align: left;
+        margin: 0.5rem 0;
+      }
+    }
+  
+    .link {
+      color: #2563eb;
+      font-weight: 500;
+    }
+  }
+  
+  .services {
+    background: #fafafa;
+    padding: 3rem 1rem;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  
+    .service-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  
+    .service-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+  
+      p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+  
+      a {
+        color: #2563eb;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .about {
+    padding: 3rem 1rem;
+  
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+  
+    .info-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.5rem;
+  
+      div {
+        flex: 1 1 250px;
+        h3 {
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+        }
+        ul {
+          list-style-type: disc;
+          padding-left: 1.25rem;
+        }
+      }
+    }
+  }
+  
+  .cta-section {
+    background: #e0f0ff;
+    text-align: center;
+    padding: 3rem 1rem;
+  
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+  
+    .primary {
+      background: #2563eb;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+    }
+  }
+  
+  .footer {
+    background: #000;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 1rem;
+    list-style: none;
+    
+    .map-section {
+        margin-top: 2rem;
+        padding: 2rem;
+       
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        display: grid;
+        gap: 1.5rem;
+      
+       
+      
+        .map-container {
+          width: 100%;
+      
+          iframe {
+            width: 50%;
+            height: 400px;
+            border: none;
+            border-radius: 12px;
+          }
         }
     }
-    > div.client {
-        background-color: white;
-        text-align: center;
-        padding: 4em 0;
-        h4 {
-            font-size: 20px;
-            margin-bottom: 2em;
-        }
-        > div.client-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2em;
-            @media (max-width: 906px) {
-                flex-direction: column;
-            }
-            > img {
-                height: 200px;
-                object-fit: contain;
-                @media (max-width: 616px) {
-                    width: 80%;
-                    height: unset;
-                }
-            }
-            > img:nth-of-type(1) {
-            }
-            > img:nth-of-type(2) {
-            }
-        }
+  
+    p {
+      font-size: 0.85rem;
+      margin: 0.25rem 0;
     }
-}
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
