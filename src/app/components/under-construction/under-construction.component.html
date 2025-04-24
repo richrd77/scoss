@@ -1,3 +1,35 @@
-<div class="wrapper">
-    <img src="https://media.istockphoto.com/id/1139968862/photo/barrier-under-construction.jpg?s=612x612&w=0&k=20&c=UdMTWQ5dIjW8PP4HXRkmd5TYdImu1cZpYPR-l9oXiwA=" alt="underconstruction">
-</div>
+<section class="services-overview-section">
+    <div>
+        <h2>Our IT Services</h2>
+        <p style="font-size: 20px;">Explore our wide range of IT services designed to support your business needs:
+        </p>
+        <div class="services">
+            <ng-template #servicesTemplate let-details="details">
+                <section>
+                    <h4>{{details.header}}</h4>
+                     
+                    <img class="img"  src="{{details.icon }}" alt="">
+                    <p>{{details.discription}}</p>
+                    <p>{{details.keyfeatures}}</p>
+                    <button class="{{details.btnClass}}" routerLink="{{details.btnClass}}">{{details.btn}}</button>
+                </section>
+            </ng-template>
+            <ng-container [ngTemplateOutlet]="servicesTemplate"
+                [ngTemplateOutletContext]="{details:{header:'Website Design and Development',icon:'/images/gallery/anon-recruitment-2024/14.png',discription:'Modern, responsive websites crafted to elevate your digital presence',keyfeatures:'Custom design, mobile optimization, SEO-friendly development, E-commerce solutions',btn:'Start Your Project', btnClass:'web-development'}}"></ng-container>
+            <ng-container [ngTemplateOutlet]="servicesTemplate"
+                [ngTemplateOutletContext]="{details:{header:'Digital Marketing Services',icon:'/images/gallery/anon-recruitment-2024/15.png',discription:' Results-driven digital marketing strategies to boost your online presence and growth',keyfeatures:'SEO, social media marketing, PPC campaigns, content marketing',btn:'Grow Your Business ', btnClass:'digital-marketing'}}"></ng-container>
+            <ng-container [ngTemplateOutlet]="servicesTemplate"
+                [ngTemplateOutletContext]="{details:{header:'Custom Software Development',icon:'/images/gallery/anon-recruitment-2024/16.png',discription:'Custom software solutions tailored to your business needs',keyfeatures:' Web, mobile, desktop applications',btn:'Learn More', btnClass:'custom-software'}}"></ng-container>
+            <ng-container [ngTemplateOutlet]="servicesTemplate"
+                [ngTemplateOutletContext]="{details:{header:'Cloud Solutions',icon:'/images/gallery/anon-recruitment-2024/17.png',discription:'Secure and scalable cloud infrastructure services',keyfeatures:'Migration, optimization, management',btn:'Explore Cloud Services', btnClass:'cloud-solutions'}}"></ng-container>
+            <ng-container [ngTemplateOutlet]="servicesTemplate"
+                [ngTemplateOutletContext]="{details:{header:'Cybersecurity Services',icon:'/images/gallery/anon-recruitment-2024/18.png',discription:'Comprehensive security solutions for your digital assets',keyfeatures:'Assessment, implementation, monitoring',btn:' View Security Solutions', btnClass:'web'}}"></ng-container>
+            <ng-container [ngTemplateOutlet]="servicesTemplate"
+                [ngTemplateOutletContext]="{details:{header:'IT Consulting',icon:'/images/gallery/anon-recruitment-2024/19.png',discription:'Strategic technology consulting for business growth ',keyfeatures:'Digital transformation, IT strategy, roadmap',btn:'Get Expert Advice', btnClass:'web-development'}}"></ng-container>
+            <ng-container [ngTemplateOutlet]="servicesTemplate"
+                [ngTemplateOutletContext]="{details:{header:'Network Solutions',icon:'/images/gallery/anon-recruitment-2024/20.png',discription:'Reliable network infrastructure and management',keyfeatures:' Design, implementation, support',btn:'Discover Networks', btnClass:'web-development'}}"></ng-container>
+            <ng-container [ngTemplateOutlet]="servicesTemplate"
+                [ngTemplateOutletContext]="{details:{header:'Technical Support',icon:'/images/gallery/anon-recruitment-2024/21.png',discription:' 24/7 technical support and maintenance services',keyfeatures:' Issue resolution, maintenance, monitoring',btn:'View Support Plans', btnClass:'web-development'}}"></ng-container>
+        </div>
+    </div>
+</section>

@@ -1,80 +1,137 @@
 <div class="wrapper">
-    <div class="content">
-        <p><strong class="highlight">(SMART CODE SOFTWARE SOLUTIONS AND SERVICES)</strong> is a comprehensive
-            service-based company
-            offering a diverse range of solutions, including:</p>
-        <div class="bullet">
-            <p><strong>Website & App Development</strong>Crafting customized websites and mobile applications to meet
-                client needs.</p>
-            <p><strong>Internship Programs</strong>Providing practical, hands-on experience for students or freshers
-                looking to enhance their skills.</p>
-            <p><strong>Freelance Services</strong>Offering project-based or contract-based services from professionals
-                across various industries.</p>
-            <p><strong>Consultancy</strong>Delivering expert advice and strategic solutions to help businesses grow and
-                innovate.</p>
-            <p><strong>Placement Training</strong>Preparing individuals for successful job placements through targeted
-                training and skill development.</p>
-            <p><strong>Recruitment Partnership</strong>Collaborating with companies to help them find the right talent
-                through effective recruitment strategies and services.</p>
-            <p><strong>Other Services</strong>Catering to a broad range of additional client needs with tailored
-                solutions.</p>
+    <section class="hero-section">
+        <h1>Leading IT Services Company in Tumkur | Digital Transformation Services</h1>
+        <p>Transform your business with our comprehensive IT services, custom software
+            development, and technology consulting. Get expert solutions tailored to your needs.</p>
+        <div class="btn">
+            <button routerLink="contact">Get a Free IT Consultation</button>
+            <button routerLink="service">Explore Our Services</button>
         </div>
-    </div>
-    <div class="services">
-        <mat-card appearance="raised" class="service-card">
-            <mat-card-header>
-                <mat-card-title>Internships</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image src="/images/internship.webp" loading="lazy" alt="Internships">
-            <mat-card-content>
-                <p>
-                    We provide Internships for students to give a glimpse of the Tech world.
-                </p>
-            </mat-card-content>
-        </mat-card>
-
-        <mat-card appearance="raised" class="service-card">
-            <mat-card-header>
-                <mat-card-title>Projects</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image src="/images/projects.webp" loading="lazy" alt="Projects">
-            <mat-card-content>
-                <p>
-                    We provide Project Ideas, help with the implementation to students.
-                </p>
-            </mat-card-content>
-        </mat-card>
-
-        <mat-card appearance="raised" class="service-card">
-            <mat-card-header>
-                <mat-card-title>Placements</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image src="/images/hire.webp" loading="lazy" alt="Projects">
-            <mat-card-content>
-                <p>
-                    We also provide placements.
-                </p>
-            </mat-card-content>
-        </mat-card>
-
-        <mat-card appearance="raised" class="service-card">
-            <mat-card-header>
-                <mat-card-title>CSR Activities</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image src="/images/csr.webp" loading="lazy" alt="Projects">
-            <mat-card-content>
-                <p>
-                    Offering coding bootcamps, workshops, training programs, mentorship programs, and career counseling for students.
-                </p>
-            </mat-card-content>
-        </mat-card>
-
-    </div>
-    <div class="client">
-        <h4>Our clients</h4>
-        <div class="client-logos">
-            <img src="https://www.anonprofessional.com/app/api/info/anon-logo.png" alt="Anon Professional Cabs logo">
-            <img src="/images/codeeasy.png" alt="Codeeasy Tumkur">
+    </section>
+    <section class="value-proposition-section">
+        <h2>Why Choose Us?</h2>
+        <div class="l1" class="list-container">
+            <ul>
+                <li>Comprehensive IT Solutions Tailored to Your Needs</li>
+                <li>Expertise in IT Infrastructure, Cloud Solutions and Cybersecurity</li>
+                <li>Affordable and Scalable Digital Marketing Services</li>
+            </ul>
         </div>
-    </div>
+        <div class="btn">
+            <button>Schedule a Free IT Consultation</button>
+        </div>
+    </section>
+    <section class="services-overview-section">
+        <div>
+            <h2>Our IT Services</h2>
+            <p style="font-size: 20px;">Explore our wide range of IT services designed to support your business needs:
+            </p>
+            <div class="services">
+                <ng-template #servicesTemplate let-details="details">
+                    <section>
+                        <h4>{{details.header}}</h4>
+                        <img class="img" src="{{details.icon }}" alt="">
+                        <p>{{details.discription}}</p>
+                        <p>{{details.keyfeatures}}</p>
+                        <button class="{{details.btnClass}}" routerLink="{{details.btnClass}}">{{details.btn}}</button>
+                    </section>
+                </ng-template>
+                <ng-container [ngTemplateOutlet]="servicesTemplate"
+                    [ngTemplateOutletContext]="{details:{header:'Website Design and Development',icon:'/images/gallery/anon-recruitment-2024/14.png',discription:'Modern, responsive websites crafted to elevate your digital presence',keyfeatures:'Custom design, mobile optimization, SEO-friendly development, E-commerce solutions',btn:'Start Your Project', btnClass:'web-development'}}"></ng-container>
+                <ng-container [ngTemplateOutlet]="servicesTemplate"
+                    [ngTemplateOutletContext]="{details:{header:'Digital Marketing Services',icon:'/images/gallery/anon-recruitment-2024/15.png',discription:' Results-driven digital marketing strategies to boost your online presence and growth',keyfeatures:'SEO, social media marketing, PPC campaigns, content marketing',btn:'Grow Your Business ', btnClass:'digital-marketing'}}"></ng-container>
+                <ng-container [ngTemplateOutlet]="servicesTemplate"
+                    [ngTemplateOutletContext]="{details:{header:'Custom Software Development',icon:'/images/gallery/anon-recruitment-2024/16.png',discription:'Custom software solutions tailored to your business needs',keyfeatures:' Web, mobile, desktop applications',btn:'Learn More', btnClass:'custom-software'}}"></ng-container>
+                <ng-container [ngTemplateOutlet]="servicesTemplate"
+                    [ngTemplateOutletContext]="{details:{header:'Cloud Solutions',icon:'/images/gallery/anon-recruitment-2024/17.png',discription:'Secure and scalable cloud infrastructure services',keyfeatures:'Migration, optimization, management',btn:'Explore Cloud Services', btnClass:'cloud-solutions'}}"></ng-container>
+                <ng-container [ngTemplateOutlet]="servicesTemplate"
+                    [ngTemplateOutletContext]="{details:{header:'Cybersecurity Services',icon:'/images/gallery/anon-recruitment-2024/18.png',discription:'Comprehensive security solutions for your digital assets',keyfeatures:'Assessment, implementation, monitoring',btn:' View Security Solutions', btnClass:'web'}}"></ng-container>
+                <ng-container [ngTemplateOutlet]="servicesTemplate"
+                    [ngTemplateOutletContext]="{details:{header:'IT Consulting',icon:'/images/gallery/anon-recruitment-2024/19.png',discription:'Strategic technology consulting for business growth ',keyfeatures:'Digital transformation, IT strategy, roadmap',btn:'Get Expert Advice', btnClass:'web-development'}}"></ng-container>
+                <ng-container [ngTemplateOutlet]="servicesTemplate"
+                    [ngTemplateOutletContext]="{details:{header:'Network Solutions',icon:'/images/gallery/anon-recruitment-2024/20.png',discription:'Reliable network infrastructure and management',keyfeatures:' Design, implementation, support',btn:'Discover Networks', btnClass:'web-development'}}"></ng-container>
+                <ng-container [ngTemplateOutlet]="servicesTemplate"
+                    [ngTemplateOutletContext]="{details:{header:'Technical Support',icon:'/images/gallery/anon-recruitment-2024/21.png',discription:' 24/7 technical support and maintenance services',keyfeatures:' Issue resolution, maintenance, monitoring',btn:'View Support Plans', btnClass:'web-development'}}"></ng-container>
+            </div>
+        </div>
+    </section>
+    <section class="about-us-section">
+        <h2>Your Trusted IT Partner in Tumkur</h2>
+        <p>Based in Tumkur, we are a team of dedicated IT professionals committed to delivering high-quality
+            services. Our mission is to help businesses thrive in today’s digital era with reliable and innovative
+            IT solutions.</p>
+        <div class="img2">
+            <img src="/images/gallery/anon-recruitment-2024/22.jpg" alt="Company images">
+        </div>
+
+        <h3>Serving Industries Across Tumakuru</h3>
+        <div class="list-container">
+            <ul>
+                <li>Manufacturing Units</li>
+                <li>Educational Institutions</li>
+                <li>Healthcare Facilities</li>
+                <li>Retail Businesses</li>
+                <li>Professional Services</li>
+                <li>Small & Medium Enterprises</li>
+            </ul>
+        </div>
+        <h3>Our Service Areas in Tumakuru Region</h3>
+        <div class="list-container">
+            <ul>
+                <li>Tumkur City</li>
+                <li>Sira</li>
+                <li>Gubbi</li>
+                <li>Tiptur</li>
+                <li>Kunigal</li>
+                <li>Surrounding Industrial Areas</li>
+            </ul>
+        </div>
+        <h2> Why Partner with Us for Your IT Needs?</h2>
+        <h3> Local Expertise</h3>
+        <div class="list-container">
+            <ul>
+                <li>Based in Tumkur</li>
+                <li>Understanding of local business environment</li>
+                <li>Bilingual support team: 24/7 technical support in Kannada and English</li>
+                <li>Regular client visits</li>
+            </ul>
+        </div>
+    </section>
+    <section class="call-to-action-section">
+        <h2>Start Your Digital Journey Today</h2>
+        <p>Schedule a free consultation with our experts and discover how we can help you achieve your
+            technology goals.</p>
+        <div class="btn">
+            <button>Book Free Consultation</button>
+        </div>
+        <h2> Get in Touch with Us Today</h2>
+        <p> Ready to take your business to the next level? Contact us to discuss your IT needs.</p>
+        <div class="list-container">
+            <ul>
+                <li> Phone:9113030506</li>
+                <li>
+                    <p>Email: <a href="mailto:scossservices@gmail.com">scossservices&#64;gmail.com</a></p>
+                </li>
+                <li>Address: SLN Krupa 1st Floor Mahalakshminagar 2nd Stage, 2nd Main Rd, Batawadi, Tumakuru, Karnataka
+                    572103</li>
+            </ul>
+        </div>
+        <h5>Map Integration</h5>
+        <section class="map-section">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=77.0980%2C13.3240%2C77.1020%2C13.3270&layer=mapnik&marker=13.3255%2C77.1003"
+                    style="border-radius: 12px;">
+                </iframe>
+                <br />
+                <small>
+                    <a href="https://www.openstreetmap.org/?mlat=13.3255&mlon=77.1003#map=18/13.3255/77.1003"
+                        target="_blank" rel="noopener noreferrer">
+                        View Larger Map
+                    </a>
+                </small>
+            </div>
+        </section>
+    </section>
 </div>

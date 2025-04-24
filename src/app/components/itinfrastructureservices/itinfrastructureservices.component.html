@@ -1,0 +1,67 @@
+<div class="wrapper">
+    <section class="hero-section">
+        <h1>Robust IT Infrastructure Services in Tumkur</h1>
+        <h5>Transform your business with our comprehensive IT infrastructure services. We deliver scalable,secure, and
+            efficient solutions that drive innovation and growth while reducing operational costs.</h5>
+        <div class="btn">
+            <button>Get a Free IT Consultation</button>
+        </div>
+    </section>
+    <div class="infrastructure-services">
+        <h1>Our Core Infrastructure Services</h1>
+        <p>We provide cutting-edge IT infrastructure solutions designed to meet your business needs:</p>
+        <ng-template #infrastructureservices let-details="details">
+            <section>
+                <h2>{{details.header}}</h2>
+                <p>{{details.pargraph}}</p>
+            </section>
+        </ng-template>
+        <ng-container [ngTemplateOutlet]="infrastructureservices"
+            [ngTemplateOutletContext]="{details:{header:'Managed IT Services',pargraph:'24/7 monitoring, maintenance, and support for your IT systems.'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="infrastructureservices"
+            [ngTemplateOutletContext]="{details:{header:'Cloud Computing Solutions',pargraph:'Scalable and cost-effective cloud infrastructure for businesses'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="infrastructureservices"
+            [ngTemplateOutletContext]="{details:{header:'Network & Security Services',pargraph:' Secure, high-performance networks with firewall and endpoint protection.'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="infrastructureservices"
+            [ngTemplateOutletContext]="{details:{header:'Server & Storage Management',pargraph:'Reliable server deployment, maintenance, and data backup solutions.'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="infrastructureservices"
+            [ngTemplateOutletContext]="{details:{header:' Enterprise IT Support',pargraph:' Custom IT support packages tailored to your business requirements.'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="infrastructureservices"
+            [ngTemplateOutletContext]="{details:{header:'Hardware and Software Procurement',pargraph:' Assisting clients in acquiring the right technology tools. '}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="infrastructureservices"
+            [ngTemplateOutletContext]="{details:{header:' IoT and Smart Infrastructure',pargraph:' IoT device setup and integration. '}}"></ng-container>
+    </div>
+    <section class="it-infrastructure-matters">
+        <h2>Why IT Infrastructure Matters?</h2>
+        <ul class="list-continer">
+            <li>Improves business efficiency & productivity</li>
+            <li>Reduces downtime and enhances security</li>
+            <li>Scalable solutions for business growth</li>
+        </ul>
+    </section>
+    <section class="trusted-it-partner">
+        <h2>Your Trusted IT Partner in Tumkur</h2>
+        <h3>Ready to Transform Your Infrastructure?</h3>
+        <p>Schedule a free infrastructure assessment with our experts. We'll analyze your current setup and provide
+            actionable recommendations for improvement.</p>
+        <h4>Contact Form:</h4>
+        <ul class="list-continer">
+            <li>Name</li>
+            <li>Email</li>
+            <li>Phone</li>
+            <li>Company</li>
+        </ul>
+        <h2>Or call us directly: [Phone Number]</h2>
+        <h2>Address:</h2>
+    </section>
+    <section class="related-it-services">
+        <ul class="list-continer">
+            <li>Website Design and Development</li>
+            <li>Mobile App Development</li>
+            <li>Cybersecurity Services</li>
+        </ul>
+        <div class="btn">
+            <button routerLink="home">Homepage</button>
+        </div>
+    </section>
+</div>

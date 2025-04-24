@@ -1,0 +1,74 @@
+<div class="wrapper">
+    <section class="hero-section">
+        <h1>Professional Website Design Services in Tumkur</h1>
+        <p>Transform your business with professional Web Solutions. From simple business websites to complex e-commerce
+            solutions, we help you establish a powerful online presence.</p>
+        <div class="btn">
+            <button>Get Free Consultation</button>
+        </div>
+    </section>
+    <div class="our-web-services">
+        <h2>Our Web Services</h2>
+        <p>We provide a wide range of services to meet your unique business needs:</p>
+        <ng-template #ourwebservices let-details="details">
+            <section>
+                <h2>{{details.header}}</h2>
+                <p>{{details.pargraph}}</p>
+            </section>
+        </ng-template>
+        <ng-container [ngTemplateOutlet]="ourwebservices"
+            [ngTemplateOutletContext]="{details:{header:'Custom Website Design',pargraph:'Unique and engaging designs that reflect your brand.'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="ourwebservices"
+            [ngTemplateOutletContext]="{details:{header:'E-Commerce Website Development',pargraph:'Build online stores with seamless shopping experiences.'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="ourwebservices"
+            [ngTemplateOutletContext]="{details:{header:'CMS-Based Websites',pargraph:'Easy-to-manage websites using WordPress, Joomla, etc. '}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="ourwebservices"
+            [ngTemplateOutletContext]="{details:{header:'Website Redesign',pargraph:'Upgrade outdated websites for modern appeal and functionality'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="ourwebservices"
+            [ngTemplateOutletContext]="{details:{header:'Maintenance and Support',pargraph:'Keep your site updated and secure with ongoing support.'}}"></ng-container>
+    </div>
+    <div class="our-websites-apart">
+        <h2> Your Trusted Website Designer in Tumkur</h2>
+        <h3>What Sets Our Websites Apart?</h3>
+        <ng-template #ourwebsitesapart let-details="details">
+            <section>
+                <h2>{{details.header}}</h2>
+                <p>{{details.pargraph}}</p>
+            </section>
+        </ng-template>
+        <ng-container [ngTemplateOutlet]="ourwebsitesapart"
+            [ngTemplateOutletContext]="{details:{header:'Custom Design',pargraph:'Websites tailored to your brand and business needs'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="ourwebsitesapart"
+            [ngTemplateOutletContext]="{details:{header:'Mobile Optimization',pargraph:'Responsive design for seamless access across devices. '}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="ourwebsitesapart"
+            [ngTemplateOutletContext]="{details:{header:'Speed and Performance',pargraph:'Fast-loading websites for better user engagement. '}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="ourwebsitesapart"
+            [ngTemplateOutletContext]="{details:{header:'Scalable Solutions',pargraph:'Build a site that grows with your business. '}}"></ng-container>
+    </div>
+    <section class="start-your-web-project">
+        <h2> Ready to Start Your Web Project?</h2>
+        <p>Take the first step towards an impactful online presence. Contact us today for a free consultation and quote.
+        </p>
+        <h4>Contact Form:</h4>
+        <ul class="list-continer">
+            <li>Name</li>
+            <li>Email</li>
+            <li>Phone</li>
+            <li>Company</li>
+            <li>Project details</li>
+            <li>Budget range</li>
+        </ul>
+        <h2>Or call us directly: [Phone Number]</h2>
+        <h2>Address:</h2>
+    </section>
+    <section class="related-it-services">
+        <h2>Related Services</h2>
+        <ul class="list-continer">
+            <li>Digital Marketing & SEO Services</li>
+            <li>Mobile App Development</li>
+        </ul>
+        <div class="btn">
+            <button>Homepage</button>
+        </div>
+    </section>
+</div>

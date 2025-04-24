@@ -1,0 +1,59 @@
+<div class="wrapper">
+    <section class="hero-section">
+        <h1>Professional Digital Marketing Services in Tumkur</h1>
+        <h2>Drive Growth, Increase Revenue, and Dominate Your Market with Our Comprehensive Digital Marketing Services
+        </h2>
+        <div class="btn">
+            <button>Get Free Consultation</button>
+        </div>
+    </section>
+    <div class="dm-services">
+        <h2>Our Digital Marketing Services</h2>
+        <p>Our services are designed to cover all aspects of your online marketing needs:</p>
+        <ng-template #digicomonent let-details="details">
+            <section>
+                <h2>{{details.header}}</h2>
+                <p>{{details.pargraph}}</p>
+            </section>
+        </ng-template>
+        <ng-container [ngTemplateOutlet]="digicomonent"
+            [ngTemplateOutletContext]="{details:{header:'Search Engine Optimization (SEO):',pargraph:'Dominate search results and drive qualified organic traffic to your website. Our technical SEO expertise ensures your business stands out in an increasingly competitive digital landscape.'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="digicomonent"
+            [ngTemplateOutletContext]="{details:{header:'Pay-Per-Click (PPC) Advertising:',pargraph:' Launch targeted ad campaigns to generate immediate leads and sales. '}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="digicomonent"
+            [ngTemplateOutletContext]="{details:{header:'Social Media Marketing (SMM):',pargraph:'Build meaningful connections with your audience through strategic social media management and engaging content.'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="digicomonent"
+            [ngTemplateOutletContext]="{details:{header:'Content Marketing:',pargraph:'Create high-quality, engaging content that resonates with your audience.'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="digicomonent"
+            [ngTemplateOutletContext]="{details:{header:'E-commerce Digital Marketing: ',pargraph:'Drive more sales with tailored strategies for online stores.'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="digicomonent"
+            [ngTemplateOutletContext]="{details:{header:'Email Marketing:',pargraph:'Boost customer loyalty and conversions through targeted email campaigns.'}}"></ng-container>
+        <ng-container [ngTemplateOutlet]="digicomonent"
+            [ngTemplateOutletContext]="{details:{header:'Web Analytics and Reporting:',pargraph:'Track, measure, and improve your digital marketing performance. '}}"></ng-container>
+    </div>
+    <section class="digital-marketing-agency">
+        <h2>Your Trusted Digital Marketing Agency in Tumkur</h2>
+        <h3>Start Your Digital Marketing Journey</h3>
+        <p>Take the first step toward digital marketing success. Schedule your free consultation today and discover how
+            we can help you achieve your business goals.</p>
+        <h4>Contact Form:</h4>
+        <ul class="list-continer">
+            <li>Name</li>
+            <li>Email</li>
+            <li>Phone</li>
+            <li>Company</li>
+        </ul>
+        <h2>Or call us directly: [Phone Number]</h2>
+        <h2>Address:</h2>
+    </section>
+    <section class="related-it-services">
+        <ul class="list-continer">
+            <li>Website Design and Development</li>
+            <li>Mobile App Development</li>
+            <li>Cybersecurity Services</li>
+        </ul>
+        <div class="btn">
+            <button>Homepage</button>
+        </div>
+    </section>
+</div>

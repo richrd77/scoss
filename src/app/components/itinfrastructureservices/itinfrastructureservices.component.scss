@@ -1,0 +1,128 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+  
+    .hero-section {
+      text-align: center;
+      padding: 2rem;
+      background: #f0f4f8;
+      border-radius: 12px;
+  
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+  
+      h5 {
+        font-weight: 400;
+        color: #555;
+      }
+  
+      .btn {
+        margin-top: 1.5rem;
+  
+        button {
+          padding: 0.75rem 1.5rem;
+          font-size: 1rem;
+          background-color: #007acc;
+          color: #fff;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #005fa3;
+          }
+        }
+      }
+    }
+  
+    .infrastructure-services {
+      padding: 1rem;
+  
+      h1 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+  
+      p {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+  
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+  
+      .service-card {
+        background-color: #ffffff;
+        padding: 1.5rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        transition: transform 0.3s;
+  
+        &:hover {
+          transform: translateY(-5px);
+        }
+  
+        img {
+          width: 70px;
+          height: 70px;
+          margin-bottom: 1rem;
+          object-fit: contain;
+        }
+  
+        h2 {
+          font-size: 1.25rem;
+          margin-bottom: 0.5rem;
+        }
+  
+        p {
+          font-size: 0.95rem;
+          color: #444;
+        }
+      }
+    }
+  
+    .it-infrastructure-matters,
+    .trusted-it-partner,
+    .related-it-services {
+      padding: 2rem;
+      background: #f9f9f9;
+      border-radius: 12px;
+  
+      h2,
+      h3,
+      h4 {
+        margin-bottom: 0.75rem;
+      }
+  
+      .list-continer {
+        list-style: disc;
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+  
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+  
+      .btn {
+        margin-top: 1rem;
+  
+        button {
+          padding: 0.75rem 1.25rem;
+          background: #007acc;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  
