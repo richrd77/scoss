@@ -1,0 +1,79 @@
+
+$box-shadow-color: rgb(223, 223, 223);
+$box-shadow: 0 0 15px 5px $box-shadow-color;
+
+
+.services-overview-section {
+  padding: 2em;
+  margin: 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-size: 4em;
+    align-self: center;
+  }
+
+
+  .sub-title {
+    font-size: 1.2rem;
+    margin: 2em;
+    align-self: center;
+
+  }
+
+  .services {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    justify-content: center;
+
+    .service-card {
+      padding: 3em 1em;
+      border-radius: 50px;
+      box-shadow: $box-shadow;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+
+      .service-heading {
+        font-size: 1.3rem;
+      }
+
+
+        img{
+          max-width: 70%;
+        }
+
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: blue;
+        padding: 0.5em 1em;
+        border: none;
+        color: white;
+        font-size: 1.1em;
+        text-decoration: none;
+        border-radius: 10px;
+
+        span {
+          padding: 0 1em;
+
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+
+}

@@ -12,6 +12,9 @@ import {
   UnderConstructionComponent
 } from './components';
 import { GalleryUnitComponent } from './components/gallery-unit/gallery-unit.component';
+import { DigiComponent } from './components/digital-marketing/digi.component';
+import { ItinfrastructureservicesComponent } from './components/itinfrastructureservices/itinfrastructureservices.component';
+import { WebdesignservicesComponent } from './components/webdesignservices/webdesignservices.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { GalleryUnitComponent } from './components/gallery-unit/gallery-unit.com
     ContactComponent,
     AboutComponent,
     UnderConstructionComponent,
-    GalleryUnitComponent
+    GalleryUnitComponent,
+    DigiComponent,
+    ItinfrastructureservicesComponent,
+    WebdesignservicesComponent
   ],
   imports: [
     BrowserModule,
