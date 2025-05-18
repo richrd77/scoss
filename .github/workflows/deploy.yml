@@ -31,6 +31,6 @@ jobs:
         if: success()
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.action-deployment }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist/scoss/browser
           enable_jekyll: true
