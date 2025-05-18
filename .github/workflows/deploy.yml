@@ -12,6 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Clearup
+        run: rm package-lock.json
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
 
