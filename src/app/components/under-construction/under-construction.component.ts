@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServicesOffered } from '../../common/models/services-offered';
 
 @Component({
   selector: 'scoss-under-construction',

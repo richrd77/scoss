@@ -1,0 +1,25 @@
+<div class="consultation-wrapper">
+  <h2>Get a Free IT Consultation</h2>
+  <p class="description">
+    Reach out today to discuss your business needs. Our IT experts are ready to guide you with a free consultation.
+  </p>
+
+  <form class="consultation-form" (ngSubmit)="onSubmit()">
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" [(ngModel)]="form.fullName" name="fullName" required />
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" [(ngModel)]="form.email" name="email" required />
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" [(ngModel)]="form.phone" name="phone" />
+
+    <label for="company">Company Name</label>
+    <input type="text" id="company" [(ngModel)]="form.company" name="company" />
+
+    <label for="needs">What are your IT needs?</label>
+    <textarea id="needs" rows="4" [(ngModel)]="form.needs" name="needs"></textarea>
+
+    <button type="submit">Request Free Consultation</button>
+  </form>
+</div>

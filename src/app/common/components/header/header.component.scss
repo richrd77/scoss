@@ -1,4 +1,4 @@
-$white-bg: white;
+$white-bg:white;
 
 header {
     background-color: $white-bg;
@@ -88,6 +88,7 @@ header {
             }
             > li {
                 > a {
+                    text-decoration: none;
                     color: inherit;
                     padding: 1em 3em;
                     @media (max-width: 1074px) {
