@@ -1,0 +1,320 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Clean white corporate IT theme */
+    --background: 0 0% 100%;
+    --foreground: 220 25% 16%;
+
+    --card: 0 0% 99%;
+    --card-foreground: 220 25% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 16%;
+
+    /* SCOSS Red #ff2a2a */
+    --primary: 0 100% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    /* SCOSS Warm Orange/Yellow #ffb347 */
+    --secondary: 33 100% 64%;
+    --secondary-foreground: 220 25% 16%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 33 100% 64%;
+    --accent-foreground: 220 25% 16%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 0 100% 58%;
+
+    --radius: 0.75rem;
+
+    /* Custom brand tokens */
+    --glow-primary: 0 100% 58%;
+    --glow-secondary: 33 100% 64%;
+    --glass: 0 0% 98%;
+    --glass-border: 220 13% 91%;
+    --whatsapp: 142 70% 49%;
+    --whatsapp-hover: 142 73% 43%;
+    --whatsapp-foreground: 0 0% 100%;
+
+    /* Dark navbar */
+    --navbar-bg: 220 30% 12%;
+    --navbar-foreground: 0 0% 100%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 25% 16%;
+    --sidebar-primary: 0 100% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 33 100% 95%;
+    --sidebar-accent-foreground: 220 25% 16%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 0 100% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+}
+
+@layer components {
+  /* Glass morphism card - light version */
+  .glass-card {
+    @apply bg-card border border-border rounded-2xl shadow-lg;
+    box-shadow: 
+      0 4px 30px -10px hsl(var(--foreground) / 0.08),
+      0 0 0 1px hsl(var(--border) / 0.5);
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 
+      0 0 20px hsl(var(--glow-primary) / 0.2),
+      0 0 40px hsl(var(--glow-primary) / 0.1);
+  }
+
+  .glow-secondary {
+    box-shadow: 
+      0 0 20px hsl(var(--glow-secondary) / 0.25),
+      0 0 40px hsl(var(--glow-secondary) / 0.15);
+  }
+
+  .glow-text {
+    text-shadow: 
+      0 0 10px hsl(var(--glow-primary) / 0.3),
+      0 0 20px hsl(var(--glow-primary) / 0.15);
+  }
+
+  /* Gradient text - SCOSS brand colors */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+  }
+
+  /* Animated border gradient */
+  .border-gradient {
+    position: relative;
+    background: hsl(var(--card));
+    border-radius: var(--radius);
+  }
+
+  .border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: calc(var(--radius) + 2px);
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--primary)));
+    background-size: 400% 400%;
+    animation: gradient-shift 4s ease infinite;
+    z-index: -1;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+
+  .border-gradient:hover::before {
+    opacity: 1;
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .float-slow {
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  /* Grid pattern background - subtle for light theme */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 
+      0 20px 50px -15px hsl(var(--foreground) / 0.15),
+      0 0 20px hsl(var(--primary) / 0.08);
+  }
+
+  /* Monospace accent text */
+  .mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Dark navbar style */
+  .dark-navbar {
+    background-color: hsl(var(--navbar-bg));
+    color: hsl(var(--navbar-foreground));
+  }
+}
+
+@layer utilities {
+  .bg-glass {
+    background-color: hsl(var(--glass));
+  }
+
+  .border-glass-border {
+    border-color: hsl(var(--glass-border));
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+}
+
+/* Keyframe animations */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out forwards;
+}
+
+/* Animation delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
